@@ -1,0 +1,4 @@
+langgraph
+faiss-cpu
+sentence-transformers
+numpy
