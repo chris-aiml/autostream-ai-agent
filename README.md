@@ -1,5 +1,16 @@
 # 🤖 AutoStream AI Agent
 
+## 🎥 Demo
+
+Example Interaction:
+
+User: What does the pro plan include?
+Agent: Pro plan costs $79/month with features Unlimited videos, 4K resolution, AI captions
+
+User: I want to try the pro plan
+Agent: Awesome! Let's get you started 🚀
+
+
 ## 🚀 Overview
 
 This project is a conversational AI agent designed to automate social media interactions. It uses intent detection, retrieval-augmented generation (RAG), and a graph-based workflow to simulate real-world AI agent systems.
