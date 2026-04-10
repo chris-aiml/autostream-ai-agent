@@ -34,6 +34,20 @@ User Input → Intent Detection →
 
 ---
 
+## 📱 WhatsApp Integration (Concept)
+
+To integrate this agent with WhatsApp:
+
+1. Use WhatsApp Business API (via providers like Twilio or Meta Cloud API)
+2. Set up a webhook endpoint (Flask/FastAPI)
+3. Incoming messages are sent to the webhook
+4. Pass message into the agent (`app.invoke`)
+5. Return agent response back to WhatsApp API
+6. Maintain session state per user (using user ID)
+
+This enables real-time conversational automation on WhatsApp.
+---
+
 ## 📂 Project Structure
 
 * `main.py` → Entry point
