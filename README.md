@@ -27,10 +27,16 @@ This project is a conversational AI agent designed to automate social media inte
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture Explanation
 
-User Input → Intent Detection →
-→ Greeting / RAG / Lead Capture → Response
+This project uses LangGraph to design a modular and state-driven conversational AI agent. LangGraph was chosen over simple pipelines because it enables structured workflows using nodes and conditional routing, which closely resembles real-world agent systems. Each component of the agent is implemented as a node—intent detection, knowledge retrieval (RAG), and lead capture—while a router dynamically directs the flow based on user intent.
+
+State management is handled through a shared state object passed across all nodes in the graph. This state stores key information such as user input, detected intent, generated response, and lead details (name, email, platform). By maintaining this state across multiple steps, the agent is able to support multi-turn conversations and ensure that actions such as lead capture are only triggered when all required information is collected.
+
+The system also integrates a Retrieval-Augmented Generation (RAG) pipeline using FAISS and sentence-transformer embeddings. This allows the agent to retrieve relevant information from a local knowledge base instead of relying solely on predefined responses.
+
+Overall, the architecture is modular, scalable, and designed to easily integrate with real LLM APIs and external services in production environments.
+
 
 ---
 
